@@ -1,0 +1,102 @@
+.Tasky {
+    text-align: center;
+}
+
+.Tasky-header {
+    background-color: #282c34;
+    min-height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.button {
+    background-color: burlywood;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px;
+}
+
+.button:hover {
+    background-color: darkorange;
+}
+
+.tasks-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.tasks-ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tasks-li {
+    margin: 10px;
+}
+
+.delete-button {
+    background-color: red;
+    border: none;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.add-task-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+.task-input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    font-family: system-ui;
+    background: #5bb4c4;
+    color: white;
+    text-align: center;
+    width: 180px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.deadline {
+    font-size: 14px;
+}

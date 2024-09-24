@@ -1,4 +1,5 @@
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import Task from "./Task";
 
 export default function Tasks(props) {
     return (
@@ -6,10 +7,11 @@ export default function Tasks(props) {
             <ul className={"tasks-ul"}>
                 {props.tasks.map((task, index) => (
                     <li className={"tasks-li"} key={index}>
-                        <span>{`\u2022 ${task}`}</span>
-                        <button className={"delete-button"} onClick={() => props.deleteTask(index)}>
-                            <DeleteForeverIcon />
-                        </button>
+                        <Task task={task}>
+                            <button className={"delete-button"} onClick={() => props.deleteTask(index)}>
+                                <DeleteForeverIcon/>
+                            </button>
+                        </Task>
                     </li>
                 ))}
             </ul>
