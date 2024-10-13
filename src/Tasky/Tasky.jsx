@@ -14,6 +14,15 @@ export default function Tasky(props){
         const newTasks = tasks.filter((task, i) => i !== index);
         setTasks(newTasks);
     }
+    const markTaskDone = (index, bool) => {
+        const newTasks = tasks.map((task, i) => {
+            if (i === index) {
+                task.done = bool;
+            }
+            return task;
+        });
+        setTasks(newTasks);
+    }
     const reset = () => {
         setTasks([]);
     }
@@ -25,7 +34,7 @@ export default function Tasky(props){
                 </p>
             </header>
             <AddTaskDialog onAddTask={addTask} reset={reset}/>
-            <Tasks deleteTask={deleteTask} tasks={tasks}/>
+            <Tasks markTaskDone={markTaskDone} deleteTask={deleteTask} tasks={tasks}/>
         </div>
     );
 }

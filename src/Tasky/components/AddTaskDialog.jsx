@@ -3,6 +3,7 @@ import {useState} from "react";
 export default function AddTaskDialog(props) {
     const [title, setTitle] = useState("");
     const [deadline, setDeadline] = useState("")
+    const [done, setDone] = useState(false);
 
     const onTitleChange = (e) => {
         setTitle(e.target.value);
@@ -15,7 +16,8 @@ export default function AddTaskDialog(props) {
     const handleAddTask = () => {
         props.onAddTask({
             title: title,
-            deadline: deadline
+            deadline: deadline,
+            done: done
         });
         setTitle("");
         setDeadline("");
